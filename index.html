@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Learn online trading">
+        <meta name="keywords" content="learn online trading in Eldoret, learn forex trading in Eldoret, online trading, forex trading, learn online trading, EFX Journals, learn forex trading">
+        <meta name="author" content="Chris Standa, https://github.com/cstanda">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learn Online Trading | EFX Journals </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>       
+      <nav id="navbar">
+        <header>EFX JOURNALS</header>
+        <ul>
+            <li><a class="nav-link" href="#What_is_online_trading?" >What is online trading?</a></li>
+            <li><a class="nav-link" href="#Types_of_markets">Types of markets</a></li>
+            <li><a class="nav-link" href="#Trading_strategies">Trading strategies</a></li>
+            <li><a class="nav-link" href="#The_basics_to_trading_the_financial_markets">The basics to trading the financial markets</a></li>
+            <li><a class="nav-link" href="#Learning_resources">Learning resources</a></li>
+            <li><a class="nav-link" href="#Sign_up_to_get_started">Sign up to get started</a></li>
+        </ul>
+    </nav>
+        <main id="main-doc">
+            <section id="What_is_online_trading?" class="main-section" >
+                <header><h1>What is online trading?</h1></header>
+                <p>Online trading invloes the buying and selling of financial securities such as currencies, stocks, cryptocurrencies, etc through internet based systems with the intention to make profits.</p>
+                <p>Before the introduction of electronic interfaces, trading was mainly conducted through face-to-face interactions as traders would gather at different trading floors such as the New York or Nairobi Stock Exchange in order to execute trades in real time. Traders were also able to place orders through mail or fax which meant that trade executions would take longer. Newspapers and Financial Bulletins were used as sources for market news which lead to slow access to important market data in order to make decisions.</p>
+                <p>Internet based systems allow traders to access different markets any time from anywhere in the world and also allow real time access of data in order to make timely decisions. Many platforms have been created and proide traders with many features such as analytical tools, educational resources, trading algorithms and bots</p>
+            </section>
+            <section id="Types_of_markets" class="main-section">
+                <header><h1>Types of markets</h1></header>
+                <p>The financial markets provide an avenue for buying and selling of securities such as stocks, foreign currencies, metals, cryptocurrencies, mutual funds, etc. The financial markets are divided into different categories each serving a specific purpose.</p>
+                <p>
+                    <table>
+                        <tr>
+                            <th>Market</th>
+                            <th>Characteristics</th>
+                        </tr>
+                        <tr>
+                            <td>Stock/Equities</td>
+                            <td>Publicly traded companies list their shares to raise capital.</td>
+                        </tr>
+                        <tr>
+                            <td>Bond</td>
+                            <td>Trading of debt securities e.g. Treasury bonds, municipal bonds, corporate bonds.</td>
+                        </tr>
+                        <tr>
+                            <td>Forex</td>
+                            <td>Participants buy or sell currencies as they either speculate or hedge on exchange rates.</td>
+                        </tr>
+                        <tr>
+                            <td>Derivatives</td>
+                            <td>Involves trading futures or options instruments that  derive their value from other underlying assets. Derivatives are used for hedging, speculation or arbitrage.   </td>
+                        </tr>
+                        <tr>
+                            <td>Futures</td>
+                            <td>A trading agreements to buy or sell an asset (physical goods) at a given price on a future date. Futures trading derive their value from an underlying market.</td>
+                        </tr>
+                        <tr>
+                            <td>Options</td>
+                            <td>Options contracts create a right but not an obligation to buy or sell an asset at a future date.</td>
+                        </tr>
+                        <tr>
+                            <td>Commodities</td>
+                            <td>Trading is done on derivatives markets whereby instruments derive their value from underlying commodities market for selling primary goods. E.g. agricultural products (wheat, etc), energy products(crude oil, etc), precious metals (gold, etc).</td>
+                        </tr>
+                        <tr>
+                            <td>Cryptocurrencies</td>
+                            <td>A decentralized market for digital assets such as Bitcoin, Ethereum, etc</td>
+                        </tr>
+                        <tr>
+                            <td>Money</td>
+                            <td>Invole short-term borrowing or lending (less than a year) with lower interest rates compared to other markets. Popular instruments in this category include Treasury Bills (T-bills), Certificates of Deposit (CDs), Commercial Paper, municipal notes, Repurchase Agreements and Money Market Funds.</td>
+                        </tr>
+                    </table>
+                </p>
+            </section>
+            <section id="Trading_strategies" class="main-section">
+                <header><h1>Trading strategies</h1></header>
+                <p>A trading strategy is a set of rules that a trader applies in making trade decisions. This will include confluences in entering a trade, exit levels and risk management.</p><h2>Scalping</h2>
+                <p>Involves taking trades that last for very short periods. A scalper can make many trades throughout the day. </p>
+                <h2>Swing trading</h2>
+                <p>In this case a trader holds trades for several days or weeks.</p>
+                <h2>Automated trading</h2>
+                <p>Automated trading involves the use of computer programs to execute trades. You can automate your trading using prebuilt Expert Advisors (EA's) or by writing your own EA's. You can also automate your trading by renting or buying bots. Let us have a look into the two options i.e. developing your own or considering commercialy available bots.</p>  
+                <h3>MetaQutoes language 4 (MQL 4) and MetaQuotes language 5 (MQL 5)</h3>
+                <p>If you wish to develop your own bots, consider using Expert Advisors for Meta Trader 4 and Meta Trader 5 platforms. MT4 and MT5 platforms have an integrated development environment for writing your own trading robots. MQL 4 and MQL 5 are coding languages for MT4 and MT5 platforms that allow traders to write their own trading strategies and indicators.</p>
+                <p>The following is MQL5 code to place a buy order using the OrderSend funtion:
+                    <code>
+                        input double lotSize = 0.1;          // Lot size for the order
+                        input double takeProfit = 50;         // Take profit in points
+                        input double stopLoss = 30;           // Stop loss in points
+                        input string symbol = "EURUSD";       // Symbol to trade
+
+                        void OnStart()
+                        {
+                            double price = SymbolInfoDouble(symbol, SYMBOL_BID); // Get the current bid price
+                            double sl = price - stopLoss * _Point;                // Calculate stop loss price
+                            double tp = price + takeProfit * _Point;              // Calculate take profit price
+
+                            // Place a buy order
+                            int ticket = OrderSend(symbol, OP_BUY, lotSize, price, 2, sl, tp, "Buy Order", 0, 0, clrGreen);
+                            
+                            // Check if the order was placed successfully
+                            if(ticket < 0)
+                            {
+                                Print("Error placing order: ", GetLastError());
+                            }
+                            else
+                            {
+                                Print("Buy order placed successfully. Ticket: ", ticket);
+                            }
+                        }
+
+                    </code>
+                    </p>
+                    <p>Take profit mechanism in MQL5 that triggers when the profit reaches $5:
+                        <code>
+                            input double targetProfit = 5.0; // Target profit in USD
+
+                            void OnTick()
+                            {
+                                double totalProfit = 0.0;
+
+                                // Loop through all open positions
+                                for(int i = PositionsTotal() - 1; i >= 0; i--)
+                                {
+                                    ulong ticket = PositionGetTicket(i);
+                                    if(PositionSelectByTicket(ticket))
+                                    {
+                                        // Sum up the profit of open positions
+                                        totalProfit += PositionGetDouble(POSITION_PROFIT);
+                                    }
+                                }
+
+                                // Check if the total profit meets or exceeds the target
+                                if(totalProfit >= targetProfit)
+                                {
+                                    // Close all open positions
+                                    for(int j = PositionsTotal() - 1; j >= 0; j--)
+                                    {
+                                        ulong ticket = PositionGetTicket(j);
+                                        if(PositionSelectByTicket(ticket))
+                                        {
+                                            if(!PositionClose(ticket))
+                                            {
+                                                Print("Error closing position: ", GetLastError());
+                                            }
+                                        }
+                                    }
+                                    Print("Closed all positions. Total profit: ", totalProfit);
+                                }
+                            }
+                        </code>
+                    </p>
+                    <p>MQL5 Expert Advisor (EA) that implements a simple trading strategy to buy at support and sell at resistance on the 5-minute timeframe.
+                        <code>
+                            input double supportLevel = 0.0;     // Support level (manual entry for example)
+                            input double resistanceLevel = 0.0;   // Resistance level (manual entry for example)
+                            input double lotSize = 0.1;           // Lot size for orders
+                            input int stopLoss = 10;               // Stop loss in points
+                            input int takeProfit = 20;             // Take profit in points
+
+                            //| Expert initialization function                                     
+                            int OnInit()
+                            {
+                                // Set default support and resistance levels
+                                supportLevel = iLow(NULL, PERIOD_M5, 1) - 0.0010; // Example value, adjust as needed
+                                resistanceLevel = iHigh(NULL, PERIOD_M5, 1) + 0.0010; // Example value, adjust as needed
+
+                                return(INIT_SUCCEEDED);
+                            }
+
+                            //| Expert tick function                                            
+                            void OnTick()
+                            {
+                                double currentPrice = SymbolInfoDouble(_Symbol, SYMBOL_BID);
+
+                                // Check if current price is at or near support
+                                if (currentPrice <= supportLevel)
+                                {
+                                    // Buy at support
+                                    if (OrderSend(_Symbol, OP_BUY, lotSize, currentPrice, 2, currentPrice - 
+                                    stopLoss * _Point, currentPrice + takeProfit * _Point, "Buy at Support", 0, 0, clrGreen) > 0)
+                                    {
+                                        Print("Buy order placed at support: ", currentPrice);
+                                    }
+                                }
+
+                                // Check if current price is at or near resistance
+                                if (currentPrice >= resistanceLevel)
+                                {
+                                    // Sell at resistance
+                                    if (OrderSend(_Symbol, OP_SELL, lotSize, currentPrice, 2, currentPrice + 
+                                    stopLoss * _Point, currentPrice - takeProfit * _Point, "Sell at Resistance", 0, 0, clrRed) > 0)
+                                    {
+                                        Print("Sell order placed at resistance: ", currentPrice);
+                                    }
+                                }
+                            }
+                        </code>
+                    </p>
+                    <p>MQL5 Expert Advisor (EA) that takes a screenshot whenever a trade (buy or sell) is executed:
+                        <code>
+                            input double lotSize = 0.1;           // Lot size for orders
+                            input int stopLoss = 10;               // Stop loss in points
+                            input int takeProfit = 20;             // Take profit in points
+
+                            //| Expert initialization function                                  
+                            int OnInit()
+                            {
+                                return(INIT_SUCCEEDED);
+                            }
+
+                            //| Expert tick function                                           
+                            void OnTick()
+                            {
+                                // Example condition to trigger a buy order
+                                if (/* your buy condition */) 
+                                {
+                                    if (OrderSend(_Symbol, OP_BUY, lotSize, SymbolInfoDouble(_Symbol, SYMBOL_BID), 2, 
+                                                SymbolInfoDouble(_Symbol, SYMBOL_BID) - stopLoss * _Point, 
+                                                SymbolInfoDouble(_Symbol, SYMBOL_BID) + takeProfit * _Point, 
+                                                "Buy Order", 0, 0, clrGreen) > 0)
+                                    {
+                                        Print("Buy order placed.");
+                                        TakeScreenshot();
+                                    }
+                                }
+
+                                // Example condition to trigger a sell order
+                                if (/* your sell condition */) 
+                                {
+                                    if (OrderSend(_Symbol, OP_SELL, lotSize, SymbolInfoDouble(_Symbol, SYMBOL_ASK), 2, 
+                                                SymbolInfoDouble(_Symbol, SYMBOL_ASK) + stopLoss * _Point, 
+                                                SymbolInfoDouble(_Symbol, SYMBOL_ASK) - takeProfit * _Point, 
+                                                "Sell Order", 0, 0, clrRed) > 0)
+                                    {
+                                        Print("Sell order placed.");
+                                        TakeScreenshot();
+                                    }
+                                }
+                            }
+
+                            //| Function to take a screenshot                                 
+                            void TakeScreenshot()
+                            {
+                                string fileName = "TradeScreenshot_" + TimeToString(TimeCurrent(), TIME_DATE | TIME_MINUTES) + ".png";
+                                if (ScreenShot(fileName))
+                                {
+                                    Print("Screenshot taken: ", fileName);
+                                }
+                                else
+                                {
+                                    Print("Error taking screenshot: ", GetLastError());
+                                }
+                            }
+
+                            //| Function to take a screenshot (basic implementation)            
+                            bool ScreenShot(const string filename)
+                            {
+                                // This function uses the built-in screenshot function
+                                bool result = ChartScreenShot(0, filename, 1920, 1080);
+                                return result;
+                            }
+
+                        </code>
+                    </p>
+                    <p>MQL5 Expert Advisor (EA) that opens two trades and implements a breakeven stop loss for one of the trades when it has moved 50% toward the target. The EA also takes profit on the other trade based on your specified parameters.
+                        <code>
+                            input double lotSize = 0.1;           // Lot size for orders
+                            input double takeProfit = 20;          // Take profit in points
+                            input double stopLoss = 10;            // Stop loss in points
+                            input double breakevenMove = 10;       // Move to breakeven when price moves this many points
+
+                            //| Expert initialization function                           
+                            int OnInit()
+                            {
+                                return(INIT_SUCCEEDED);
+                            }
+
+                            //| Expert tick function                                        
+                            void OnTick()
+                            {
+                                // Check for existing positions
+                                if (PositionsTotal() < 2)
+                                {
+                                    // Open two buy orders
+                                    if (OrderSend(_Symbol, OP_BUY, lotSize, SymbolInfoDouble(_Symbol, SYMBOL_BID), 2,
+                                                SymbolInfoDouble(_Symbol, SYMBOL_BID) - stopLoss * _Point,
+                                                SymbolInfoDouble(_Symbol, SYMBOL_BID) + takeProfit * _Point,
+                                                "Buy Order 1", 0, 0, clrGreen) > 0)
+                                    {
+                                        Print("First buy order placed.");
+                                    }
+
+                                    if (OrderSend(_Symbol, OP_BUY, lotSize, SymbolInfoDouble(_Symbol, SYMBOL_BID), 2,
+                                                SymbolInfoDouble(_Symbol, SYMBOL_BID) - stopLoss * _Point,
+                                                SymbolInfoDouble(_Symbol, SYMBOL_BID) + takeProfit * _Point,
+                                                "Buy Order 2", 0, 0, clrGreen) > 0)
+                                    {
+                                        Print("Second buy order placed.");
+                                    }
+                                }
+
+                                // Check and manage existing positions
+                                ManagePositions();
+                            }
+
+                            //| Function to manage positions                                     
+                            void ManagePositions()
+                            {
+                                for (int i = 0; i < PositionsTotal(); i++)
+                                {
+                                    ulong ticket = PositionGetTicket(i);
+                                    if (PositionSelectByTicket(ticket))
+                                    {
+                                        double openPrice = PositionGetDouble(POSITION_PRICE_OPEN);
+                                        double currentPrice = SymbolInfoDouble(_Symbol, SYMBOL_BID);
+                                        double tpPrice = openPrice + takeProfit * _Point;
+
+                                        // Move stop loss to breakeven if the trade has moved 50% towards the target
+                                        if (currentPrice >= openPrice + (takeProfit / 2) * _Point)
+                                        {
+                                            double breakevenSL = openPrice; // Set breakeven stop loss
+                                            if (PositionGetDouble(POSITION_SL) < breakevenSL)
+                                            {
+                                                // Modify the stop loss to breakeven
+                                                if (PositionModify(ticket, breakevenSL, tpPrice))
+                                                {
+                                                    Print("Stop loss moved to breakeven for ticket: ", ticket);
+                                                }
+                                                else
+                                                {
+                                                    Print("Error moving stop loss: ", GetLastError());
+                                                }
+                                            }
+                                        }
+
+                                        // Close the position if the target is reached
+                                        if (currentPrice >= tpPrice)
+                                        {
+                                            if (PositionClose(ticket))
+                                            {
+                                                Print("Position closed at target for ticket: ", ticket);
+                                            }
+                                            else
+                                            {
+                                                Print("Error closing position: ", GetLastError());
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        </code>
+                    </p>
+                <h3>Royal Q</h3>
+                <p>
+                    <a href="https://royalqs.com/s/PX6BC" target="_blank">Royal Q</a> is an artificial intelligence (AI) and quantitative trading robot for the cryptocurrencies market. A quantitative trading robot also referred to as a quant bot uses quantitative analysis to make trading decisions. Royal Q is user-friendly and only requires an API connection configuration with a crypto exchange in order to trade. The Royal Q quant bot removes the psychological part of trading which tends to be a big challenge to most traders. Quant bots are mostly preferred by financial institutions because they can process vast amounts of data and trade efficiently.  
+                </p>
+            </section><section id="The_basics_to_trading_the_financial_markets" class="main-section">
+                <header><h1>The basics to trading the financial markets</h1></header>
+                <h2>Technical analysis</h2>
+                <p>This is the evaluation and forecast of price movements for a given asset using chart patterns and trends rather than fundamental factors.</p>
+                <figure>
+                    <img src="./images/GBPUSD_2024-10-17_02-23-13.png" id="Technical-analysis-chart" alt="Technical analysis chart using the ICT strategy">
+                    <figcaption>Technical analysis chart using the ICT strategy</figcaption>
+                  </figure>
+                <h2>Psychology</h2>
+                <p>Psychological factors that contribute to a trader's sucess include:
+                    <ol class="psychology" >
+                        <li>Making poor decisions due to fear of missing out (FOMO) that leads one into rushing to trade.</li>
+                        <li>Being able to maintain emotional control and sticking to your plan even when market is going against your expectations.</li>
+                        <li>Patience to wait for the right opportunity.</li>
+                        <li>Holding on to loses with the hope that the market will change direction and go in one's favour.</li>
+                        <li>A series of wins can make one over confident leading to over risking.</li>
+                    </ol>
+                </p>
+                <h2>Risk management</h2>
+                <p>Risk management is the identifion and control of potential losses while also evaluating profit potential to ensure success in the financial markets. Risk management is vital to capital preservation.</p>
+                <h2>Trading edge</h2>
+                <p>Having an edge in the market means having a unique strategy that allows one to make consistent profits. Trading edge is a combination of superior analytical skills, experince, proper risk management and access to information.</p>
+                <h2>Economic calendar</h2>
+                <p>Traders and investors use the economic calendar to keep track of the release of important economic indicators such as interest rates decision, inflation data, employment data, GDP releases, manufacturing and services data. The release of such news is used to anticipate market volatility which can cause drastic price movements in the markets.</p>
+            </section><section id="Learning_resources" class="main-section">
+                <header><h1>Learning resources</h1></header>
+                <p>The following are useful resources to help you learn online trading:</p>
+                <h2>Online course</h2>
+                <p>Free online course on forex trading for beginners available at <a href="https://www.babypips.com/learn" target="_blank">The School of Pipsology on Babypips.com</a></p>
+                <h2>Simulated trading environment</h2>
+                <p>Traders can use demo accounts provided by the broker they are registered with to trade in the markets without having to risk real funds. The demo accounts are used to test different trading strateges on various trading instruments.</p>
+                <h2>YouTube</h2>
+                <p>Learn ICT concepts from <a href="https://www.youtube.com/@InnerCircleTrader" target="_blank" >The Inner Circle Trader</a> by Michael J. Huddleston.</p>
+                <h2>Books</h2>
+                <p>"Market Wizards" by Jack D. Schwager. The book gives insights from successful traders.</p>
+            </section><section id="Sign_up_to_get_started" class="main-section">
+                <header><h1>Sign up to get started</h1></header>
+                <p>To get started on your trading journey, all you need is a device such as a PC, tablet or a mobile phone with internet connection then register to trade in your desired market.</p>
+                    <h2>Forex Broker</h2>
+                    <p>
+                        <a href="https://trk.pepperstonepartners.com/aff_c?offer_id=367&aff_id=34999" target="_blank">Pepperstone Markets</a> is an international borkerage firm which is also registered with the Capital Markets Authority (CMA) in Kenya. Enjoy tight spreads on advanced platforms such as TradingView, C-Trader and MT5. Pepperstone Markets allows M-Pesa for instant deposits and withdrawals.
+                    </p>
+                    <p>Trade CFD's such as Stocks, Forex, Derived Indices, Stock Indices, ETFs, Commodities, Cryptocurrencies and options on over 50 assets with <a href="https://track.deriv.com/_F29fUiYb7-pBMfcXPt5VjGNd7ZgqdRLk/1/" target="_blank">Deriv</a>. Deriv is known to offer Synthetic indices such as Step Index, Boom and Crash, Volatility 75, Volatility 100 among many others.
+                    </p> 
+                    <h2>Trade with a prop firm</h2>
+                        <p>
+                            A prop firm is a company that provides traders with its own capital to make profits which is shared between the company and traders.
+                        </p>
+                    <p><a href="https://nextstepfunded.com/ref/500/" target="_blank">Next Step Funded</a> is a prop firm that provides funded accounts through evaluations. They also offer High Frequency Trading (HFT) funded accounts. HFT involes the use of algorithms to place a large number of orders which is done in high speeds while taking advantage of market inefficiencies.</p>
+                    <p>
+                        <h2>Cryptocurrency exchanges</h2>
+                        <p>A crypto exchange facilitates the trade of digital currencies for other assets i.e. fiat money or other digital currencies. There are two categories of crypto exchanges i.e. centralized and decentralized exchanges (DEX).A DEX allows crypto traders to directly transact with each other while a centralized exchange is run by a company that acts as an intermediary between buyers and sellers.</p>
+                        <p>The <a href="https://www.binance.com/en/register?ref=36360489" target="_blank" >Binance</a> exchange is one of the largest and most popular centralized exchange in the world.
+                        </p>
+                    <h2>Crypto peer-to-peer marketplace</h2>
+                    <p><a href="https://paxful.com/?r=a1YD5qRNZkW" target="_blank" >Paxful</a> is a peer-to-peer marketplace for buying and selling crypto. You can set profit margins, build a unique customer experience and get paid using different payment methods including M-Pesa.</p>
+                    <p><a href="https://www.binance.com/en/register?ref=36360489" target="_blank" >Binance</a> exchange also offers a peer-to-peer marketplace.</p>
+                    <h2>Trading and charting platforms</h2>
+                    <p><a href="https://www.tradingview.com/gopro/?share_your_love=find_x" target="_blank" >TradingView</a> is a social platform for traders that provides financial data and advanced tools for analysis and trading.</p>           
+            </section>
+            <footer>
+                <address>Website by: <a href="https://github.com/cstanda"target="_blank" >Chris Standa</a></address>
+            </footer>
+        </main>
+    </body>
+</html>

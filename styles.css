@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: beige;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nav-bar */
+#navbar> img{
+    height: 20%;
+    border-radius: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+
+}
+
+#navbar> header{
+    font-size: 1.5625rem;
+    font-weight: bolder;
+    color: red;
+    margin-bottom: 1rem;
+}
+
+#navbar> p {
+    font-size: 0.875rem;
+    text-align: center;
+    color: yellow;
+    margin-bottom: 2.5rem;
+}
+
+#navbar{
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    resize: horizontal;
+    overflow-x: scroll;  
+    width: 100%;
+    border-bottom: 0.0625rem solid;
+    margin-bottom: 2.5rem;
+    background-color: green;
+    color: beige;
+}
+
+#navbar li{
+    list-style: none;  
+    border-top: 1px solid beige;
+}
+
+#navbar a{
+    display: block;
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: beige;
+    cursor: pointer;
+}
+
+#navbar a:hover {
+    font-size: 1.0625rem;
+    font-weight: bolder;
+    color: green;
+    background-color: beige;
+
+}
+
+/* the main document */
+#main-doc{
+    margin: 0 auto;
+}
+
+section{
+    margin-top: 2.5rem;
+}
+
+header{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: large;
+    margin: 0.9375rem;
+}
+
+h3{
+    font-size:medium ;
+    margin: 0.9375rem;
+}
+
+p{
+    margin: 0.9375rem;
+}
+
+ol{
+    margin: 0.9375rem;
+
+}
+
+ol.psychology {
+    display:inline-block;
+    list-style: inside;
+    text-align: left;
+}
+/* basics to trading the financial markets section  */
+#Technical-analysis-chart{
+    width: 45rem;
+    height: 20rem;
+    align-content: center;
+}
+
+figure{
+    border: 1px solid black;
+    margin: 0.9375rem;
+    padding: 0.625rem;
+    width: 50rem;
+}
+
+figcaption{
+    text-align: center;
+}
+
+code{
+    display: block;
+    text-align: left;
+    font-size: 0.75rem;
+    white-space: pre;
+    background-color: rgb(255, 255, 255);
+}
+
+/* table */
+table, th, td {
+    border: 0.0625rem solid black;
+    padding: 0.125rem;
+    margin: 0.9375rem;
+}
+
+/* Footer */
+footer{
+    padding: 1.875rem;
+    background-color: red;
+    width: 100%;
+}
+
+footer ul li{
+    list-style:none; 
+    display: inline;
+}
+
+footer a:hover{
+    background-color: green;
+    color: beige;
+}
+
+address{
+    font-size: 1rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+    body {
+      flex-direction: row;
+    }
+    #navbar {
+        width: 18.75rem;
+        height: 100vh;
+        position: fixed;
+    }
+    #main-doc{
+        margin: 0 1.25rem;
+        margin-left: 18.75rem;
+    }
+}
+
+/* Signed: Chris Standa https://github.com/cstanda */
+
+
